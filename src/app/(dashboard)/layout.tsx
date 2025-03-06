@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   viewport:
     "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
   icons: [
-    {rel: "apple-touch-icon", url: "/logo.svg"},
-    {rel: "icon", url: "/logo.svg"},
+    {rel: "apple-touch-icon", url: "/icon.svg"},
+    {rel: "icon", url: "/icon.svg"},
   ],
 };
 
@@ -43,8 +43,10 @@ export default async function RootLayout({children}: {children: React.ReactNode}
   return (
     <html lang="en">
       <Provider user={user} user_details={userData}>
-        <body className="mx-auto flex h-[100dvh] w-full overflow-hidden md:w-10/12 xl:w-4/6">
-          <main className="m-auto h-full w-full rounded-t-2xl">{children}</main>
+        <body className="flex h-[100dvh] overflow-hidden">
+          <main className="mx-auto h-full w-full rounded-t-2xl md:w-10/12 xl:w-4/6">
+            {children}
+          </main>
           <Toaster />
         </body>
       </Provider>
