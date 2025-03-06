@@ -86,7 +86,7 @@ export function Transactions() {
             size={18}
           />
           <input
-            className="w-full rounded-xl bg-gray-100 py-3 pr-4 pl-10 text-sm focus:ring-2 focus:ring-violet-500 focus:outline-none dark:bg-gray-700"
+            className="w-full rounded-xl bg-gray-100 py-3 pr-4 pl-10 text-base focus:ring-2 focus:ring-violet-500 focus:outline-none dark:bg-gray-700"
             placeholder="Buscar transacciones..."
             type="text"
             value={searchQuery}
