@@ -4,11 +4,11 @@ import {User} from "@supabase/supabase-js";
 import {ThemeProvider} from "next-themes";
 import React, {type ReactNode, createContext, useContext, useMemo, useState} from "react";
 
-import {UserData} from "@/app/(dashboard)/layout";
+import {UserDetails} from "@/db/types";
 
 interface UserDataContextType {
   user: User | null;
-  user_details: UserData | null;
+  user_details: UserDetails | null;
   live: boolean | null;
   updateLiveStatus: (status: boolean) => void;
 }
@@ -27,7 +27,7 @@ function Provider({
 }: {
   children: ReactNode;
   user: User | null;
-  user_details: UserData | null;
+  user_details: UserDetails | null;
 }) {
   const [live, setLive] = useState<boolean | null>(null);
 
@@ -47,7 +47,7 @@ function Provider({
 
   return (
     <UserDataContext.Provider value={value}>
-      <ThemeProvider disableTransitionOnChange enableSystem attribute="class" defaultTheme="system">
+      <ThemeProvider disableTransitionOnChange enableSystem attribute="class" defaultTheme="light">
         {children}
       </ThemeProvider>
     </UserDataContext.Provider>

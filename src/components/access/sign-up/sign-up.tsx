@@ -5,7 +5,6 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {useRouter} from "next/navigation";
 import {useForm} from "react-hook-form";
 import {Loader} from "lucide-react";
-// biome-ignore lint/style/useImportType: <explanation>
 import {z} from "zod";
 import {toast} from "sonner";
 
@@ -50,7 +49,7 @@ export default function SignUpForm() {
       if (error) throw new Error(error.message);
 
       router.push("/auth/callback");
-    } catch (error) {
+    } catch {
       setIsSubmited(false);
     }
   };

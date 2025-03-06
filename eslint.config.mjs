@@ -26,7 +26,6 @@ export default [
         {blankLine: "always", prev: ["const", "let", "var"], next: "*"},
         {blankLine: "any", prev: ["const", "let", "var"], next: ["const", "let", "var"]},
       ],
-      "no-console": "warn",
     },
   },
   // React configuration
@@ -58,6 +57,7 @@ export default [
       ...eslintPluginJsxA11y.configs.recommended.rules,
       ...eslintPluginReactHooks.configs.recommended.rules,
       ...vercelStyleGuideReact.rules,
+      "react/no-array-index-key": "off",
       "react/prop-types": "off",
       "react/jsx-uses-react": "off",
       "react/react-in-jsx-scope": "off",

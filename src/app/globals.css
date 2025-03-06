@@ -2,8 +2,10 @@
 
 @plugin "tailwindcss-animate";
 
+@variant dark (&:where([data-theme="dark"]));
+
 :root {
-  --background: hsl(0 0% 100%);
+  --background: #f9fafb;
   --foreground: hsl(240 10% 3.9%);
 
   --card: hsl(0 0% 100%);
@@ -48,7 +50,7 @@
   --radius: 0.6rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (color-scheme: dark) {
   :root {
     --background: hsl(240 10% 3.9%);
     --foreground: hsl(0 0% 98%);

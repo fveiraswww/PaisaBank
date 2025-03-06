@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable react/hook-use-state */
 "use client";
 
@@ -7,7 +6,6 @@ import {Loader} from "lucide-react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useRouter} from "next/navigation";
 import {useForm} from "react-hook-form";
-// biome-ignore lint/style/useImportType: <explanation>
 import {z} from "zod";
 import {toast} from "sonner";
 

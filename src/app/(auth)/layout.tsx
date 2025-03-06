@@ -6,20 +6,38 @@ import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import Link from "next/link";
 import {Flag} from "lucide-react";
+import {redirect} from "next/navigation";
+import {ThemeProvider} from "next-themes";
+
+import {supabaseServer} from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "PaisaBank",
 };
 
 export default async function RootLayout({children}: {children: React.ReactNode}) {
+  const supabase = await supabaseServer();
+
+  const {
+    data: {user},
+  } = await supabase.auth.getUser();
+
+  if (user?.id) {
+    const {data} = await supabase.from("user_details").select().eq("user_id", user.id).single();
+
+    if (data) {
+      redirect(`/dashboard/${data?.username ?? ""}`);
+    }
+  }
+
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <body className="m-auto grid min-h-screen grid-rows-[auto,1fr,auto] font-sans antialiased">
         <main>
           <Link className="absolute top-8 left-8 md:top-4 md:left-4" href="/">
             <div className="flex flex-row items-center gap-2">
               <Flag height={16} width={16} />
-              <span className="text-sm font-bold tracking-wide text-white/60">PaisaBank beta</span>
+              <span className="text-sm font-bold tracking-wide">PaisaBank beta</span>
             </div>
           </Link>
           <div className="flex h-screen w-full flex-row overflow-hidden">
@@ -39,7 +57,6 @@ export default async function RootLayout({children}: {children: React.ReactNode}
                 }}
               >
                 {[...Array(60 * 60)].map((_, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
                   <div key={index} className="border-[0.5px] border-gray-100/20" />
                 ))}
               </div>

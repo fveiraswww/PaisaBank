@@ -71,13 +71,15 @@ export default function HeroGeometric() {
             initial="hidden"
             variants={fadeUpVariants}
           >
-            <Flag height={16} width={16} />
+            <Flag className="text-white/60" height={16} width={16} />
             <span className="text-sm tracking-wide text-white/60">PaisaBank beta</span>
             <Separator className="!h-4" orientation="vertical" />
             <Link href="/signIn">
               <span className="group flex cursor-pointer items-center gap-1.5 text-neutral-500">
-                <span className="text-sm tracking-wide text-white/60">Access</span>
-                <div className="rounded-full bg-neutral-100 dark:bg-neutral-900">
+                <span className="hover:text-brand-secondary text-sm tracking-wide text-white/60 transition-all">
+                  Access
+                </span>
+                <div className="rounded-full bg-neutral-900">
                   <ArrowUpRight
                     className="lucide lucide-arrow-up-right size-3.5 transition-transform duration-100 group-hover:translate-x-px group-hover:-translate-y-px"
                     height={18}
@@ -96,7 +98,7 @@ export default function HeroGeometric() {
               <br />
               <span
                 className={cn(
-                  "bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300 bg-clip-text text-transparent",
+                  "to-brand-secondary bg-gradient-to-r from-indigo-300 via-white/90 bg-clip-text text-transparent",
                 )}
               >
                 Your All-in-One Digital Banking Platform

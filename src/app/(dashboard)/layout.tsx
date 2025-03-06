@@ -43,11 +43,9 @@ export default async function RootLayout({children}: {children: React.ReactNode}
   return (
     <html lang="en">
       <Provider user={user} user_details={userData}>
-        <body className="flex h-screen overflow-hidden">
-          <div className="flex-1 px-4 pt-4 font-sans">
-            <main className="bg-background m-auto h-full w-full rounded-t-2xl">{children}</main>
-            <Toaster />
-          </div>
+        <body className="mx-auto flex h-[100dvh] w-full overflow-hidden md:w-10/12 xl:w-4/6">
+          <main className="m-auto h-full w-full rounded-t-2xl">{children}</main>
+          <Toaster />
         </body>
       </Provider>
     </html>
