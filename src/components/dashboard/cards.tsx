@@ -14,7 +14,7 @@ export function Cards() {
   const {user_details} = useUser();
 
   return (
-    <section className="mt-4 px-4">
+    <section className="mt-0 px-4 md:mt-4">
       <div className="mb-2 flex items-center justify-between">
         <h2 className="text-lg font-semibold">
           Hola, {user_details?.name?.length ? user_details.name : user_details?.username}{" "}
@@ -34,7 +34,7 @@ export function Cards() {
               <CarouselItem key={card.id} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-2">
                   <Card
-                    className={`h-52 w-full rounded-2xl bg-gradient-to-br ${getCardColor(
+                    className={`h-48 w-full rounded-2xl bg-gradient-to-br md:h-52 ${getCardColor(
                       card.issuer,
                     )} text-white shadow-lg`}
                   >

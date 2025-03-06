@@ -43,7 +43,7 @@ export default async function RootLayout({children}: {children: React.ReactNode}
   return (
     <html lang="en">
       <Provider user={user} user_details={userData}>
-        <body className="flex h-[100dvh] overflow-hidden">
+        <body className="flex h-[100dvh] overflow-x-hidden overflow-y-scroll">
           <main className="mx-auto h-full w-full rounded-t-2xl md:w-10/12 xl:w-4/6">
             {children}
           </main>

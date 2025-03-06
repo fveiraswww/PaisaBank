@@ -60,7 +60,7 @@ export function Transactions() {
     <div>
       <motion.section
         animate={{y: 0, opacity: 1}}
-        className="mt-6 min-h-[60vh] flex-1 rounded-t-3xl bg-white p-4 dark:bg-gray-800"
+        className="mt-0 flex-1 rounded-t-3xl bg-white p-4 md:mt-6 dark:bg-gray-800"
         initial={{y: 50, opacity: 0}}
         transition={{
           type: "spring",
