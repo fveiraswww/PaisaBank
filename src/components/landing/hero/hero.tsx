@@ -24,7 +24,7 @@ export default function HeroGeometric() {
   };
 
   return (
-    <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#030303]">
+    <div className="relative flex h-[100dvh] w-full items-center justify-center overflow-hidden bg-[#030303]">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
       <CreditCard

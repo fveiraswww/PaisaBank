@@ -32,7 +32,7 @@ export default async function RootLayout({children}: {children: React.ReactNode}
 
   return (
     <html suppressHydrationWarning lang="en">
-      <body className="m-auto grid min-h-screen grid-rows-[auto,1fr,auto] font-sans antialiased">
+      <body className="m-auto grid h-[100dvh] grid-rows-[auto,1fr,auto] font-sans antialiased">
         <main>
           <Link className="absolute top-8 left-8 md:top-4 md:left-4" href="/">
             <div className="flex flex-row items-center gap-2">
