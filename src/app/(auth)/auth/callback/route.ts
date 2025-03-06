@@ -53,10 +53,10 @@ export async function GET(request: NextRequest) {
 
       await supabase.from("user_details").insert([userDetails]);
 
-      return NextResponse.redirect(`${requestUrl.origin}/${finalUsername}`);
+      return NextResponse.redirect(`${requestUrl.origin}/dashboard/${finalUsername}`);
     }
 
-    return NextResponse.redirect(`${requestUrl.origin}/${baseUsername}`);
+    return NextResponse.redirect(`${requestUrl.origin}/dashboard/${baseUsername}`);
   }
 
   return NextResponse.redirect(`${requestUrl.origin}/dashboard/${baseUsername}`);

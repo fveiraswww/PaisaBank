@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {Flag} from "lucide-react";
 import {redirect} from "next/navigation";
-import {ThemeProvider} from "next-themes";
+import {Toaster} from "sonner";
 
 import {supabaseServer} from "@/lib/supabase/server";
 
@@ -66,6 +66,7 @@ export default async function RootLayout({children}: {children: React.ReactNode}
             </div>
           </div>
         </main>
+        <Toaster />
       </body>
     </html>
   );

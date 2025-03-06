@@ -27,6 +27,10 @@ export function Cards() {
         </div>
       ) : error ? (
         <div className="flex h-52 items-center justify-center text-red-500">{error}</div>
+      ) : cards.length === 0 ? (
+        <div className="flex h-52 items-center justify-center text-gray-500">
+          Esta cuenta no se encuentra habilitada para probar la beta
+        </div>
       ) : (
         <Carousel className="w-full">
           <CarouselContent>
