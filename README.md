@@ -34,3 +34,12 @@ PaisaBank/
 
 ### Dev
 - **ESLint** - Linting
+
+### Factibilidad
+Problema: Argentina !== open-banking.
+Solución: alguna maniobra con Web Scraping o integración parcial con los bancos más utilizados.
+
+Riesgo: Manejar información financiera === ataques y fraude. 
+Solución: MFA
+
+
