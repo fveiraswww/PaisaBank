@@ -1,15 +1,36 @@
-## Getting Started with PaisaBank
+# PaisaBank
 
-First, run the development server:
+<img width="1710" alt="Screenshot 2025-03-05 at 10 20 35 PM" src="https://github.com/user-attachments/assets/32ba37cf-cfc3-49d8-94ce-8a198a18c920" />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## 📁 Estructura
+```
+PaisaBank/
+├── src/
+│   ├── app/           # Rutas
+│   ├── components/    # Componentes de pág + ui
+│   ├── db/           # Configuración y modelos de la db
+│   ├── lib/          # Utilidades
+│   ├── services/     # Servicios
+│   └── middleware.ts # Middleware (auth)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tecnologías
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Core
+- **Next.js 15** - Framework
+- **TypeScript** - Lenguaje
+
+### UI
+- **Tailwind CSS 4** - CSS
+- **Shadcn** - Componentes
+- **Framer Motion** - Anim.
+
+### DB y Back
+- **Supabase + api routes** - Backend
+
+### Forms
+- **React Hook Form** - Form
+- **Zod** - Validación
+
+### Dev
+- **ESLint** - Linting
